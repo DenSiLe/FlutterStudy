@@ -116,3 +116,34 @@ min：与max相反，是最小化主轴方向的可用空间;
 9. assert(条件)如果条件不满足，会中断程序的执行，否则继续执行流程。
 
         assert(1>2); //程序中断;
+
+10. r"ss" 字符串前面加一个r，即使有空格或者\也会原样打出字符串，"ss"*2,字符串可以乘
+
+11. List支持多类型
+
+        var list = [1,2,3,"a",false];
+
+    List的join方法：在每一个元素之间插入参数，然后返回字符串
+
+        var list = [1,2,3,4];
+        print(list.join("&"));//1&2&3&4
+
+    List的sort方法：把列表中的元素(需同一类型)按从大到小重新排列
+
+        var list = [3,2,1,4];
+        print(list.sort());//list = [1,2,3,4];
+
+    List的sublist(start,end)方法：会返回列表中索引从start到end的子列表,为[start,end),且不会影响原List
+
+        var list = [3,2,1,4];
+        print(list.sublist(1,3));//newList = [2,1];
+
+     List的any方法,只要List中有满足any里的表达式的元素，就返回true，否则返回false
+
+        var any = numList.any((num) => num > 3);
+        print(any); //只要有>3的任何元素,返回true
+
+    List的every方法,只有List中的所有元素满足表达式，才返回true，否则返回false
+
+        var every = numList.every((num) => num > 3);
+        print(every); //所有元素大于3,返回true

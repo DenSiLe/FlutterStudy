@@ -54,6 +54,11 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   cardTest() {
+    var list = ["c","b","a","A","d"];
+    var newList =  list.sublist(1,4);
+    newList.sort();
+    var str = list.join("&");
+    var str2 = list.any((s)=>s == "c").toString() + newList.any((s)=>s == "c").toString();
     return Card(
       color: Colors.lightBlue,
       elevation: 10.0,
@@ -63,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
         alignment:  Alignment.center,
         height: 100,
         width: 100,
-        child: Text("s\n"*4,style: TextStyle(fontSize: 20),),
+        child: Text(str,style: TextStyle(fontSize: 20),),
       ),
     );
   }  
