@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
     var newList =  list.sublist(1,4);
     newList.sort();
     var str = list.join("&");
-    var str2 = list.any((s)=>s == "c").toString() + newList.any((s)=>s == "c").toString();
+    // var str2 = list.any((s)=>s == "c").toString() + newList.any((s)=>s == "c").toString();
     return Card(
       color: Colors.lightBlue,
       elevation: 10.0,
