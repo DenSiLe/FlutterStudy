@@ -60,9 +60,11 @@ class _MyHomePageState extends State<MyHomePage> {
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(10.0))),
       child: Container(
-        margin:const EdgeInsets.all(10.0),
+        alignment:  Alignment.center,
         height: 100,
+        width: 100,
+        child: Text("s\n"*4,style: TextStyle(fontSize: 20),),
       ),
     );
-  }
+  }  
 }
